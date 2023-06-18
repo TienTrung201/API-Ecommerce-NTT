@@ -1,5 +1,5 @@
 using Ecommerce_API.Core.Initial;
-using Ecommerce_API.Repositories;
+using Ecommerce_API.Repositories.Repositories;
 using Ecommerce_API.Service.Services;
 using Microsoft.EntityFrameworkCore;
 

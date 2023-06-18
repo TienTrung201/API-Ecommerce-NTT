@@ -41,6 +41,6 @@ namespace Ecommerce_API.Core.Entities
         public int? Gender { get; set; }
         public DateTime? BirthDate { get; set; }
 
-        public DateTime? CreatedAt { get; set; }
+        public List<AddressEntity>? Addresses { get; set; }
     }
 }
