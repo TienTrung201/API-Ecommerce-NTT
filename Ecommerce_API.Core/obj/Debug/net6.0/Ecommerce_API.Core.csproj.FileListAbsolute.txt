@@ -1,0 +1,12 @@
+D:\Wep\project\Ecommerce_API_NTT\Ecommerce_API.Core\bin\Debug\net6.0\Ecommerce_API.Core.deps.json
+D:\Wep\project\Ecommerce_API_NTT\Ecommerce_API.Core\bin\Debug\net6.0\Ecommerce_API.Core.dll
+D:\Wep\project\Ecommerce_API_NTT\Ecommerce_API.Core\bin\Debug\net6.0\Ecommerce_API.Core.pdb
+D:\Wep\project\Ecommerce_API_NTT\Ecommerce_API.Core\obj\Debug\net6.0\Ecommerce_API.Core.csproj.AssemblyReference.cache
+D:\Wep\project\Ecommerce_API_NTT\Ecommerce_API.Core\obj\Debug\net6.0\Ecommerce_API.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\Wep\project\Ecommerce_API_NTT\Ecommerce_API.Core\obj\Debug\net6.0\Ecommerce_API.Core.AssemblyInfoInputs.cache
+D:\Wep\project\Ecommerce_API_NTT\Ecommerce_API.Core\obj\Debug\net6.0\Ecommerce_API.Core.AssemblyInfo.cs
+D:\Wep\project\Ecommerce_API_NTT\Ecommerce_API.Core\obj\Debug\net6.0\Ecommerce_API.Core.csproj.CoreCompileInputs.cache
+D:\Wep\project\Ecommerce_API_NTT\Ecommerce_API.Core\obj\Debug\net6.0\Ecommerce_API.Core.dll
+D:\Wep\project\Ecommerce_API_NTT\Ecommerce_API.Core\obj\Debug\net6.0\refint\Ecommerce_API.Core.dll
+D:\Wep\project\Ecommerce_API_NTT\Ecommerce_API.Core\obj\Debug\net6.0\Ecommerce_API.Core.pdb
+D:\Wep\project\Ecommerce_API_NTT\Ecommerce_API.Core\obj\Debug\net6.0\ref\Ecommerce_API.Core.dll
