@@ -883,6 +883,33 @@
         "runtime": {
           "bin/placeholder/Ecommerce_API.Core.dll": {}
         }
+      },
+      "Ecommerce_API.Repositories/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Ecommerce_API.Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Ecommerce_API.Repositories.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Ecommerce_API.Repositories.dll": {}
+        }
+      },
+      "Ecommerce_API.Service/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Ecommerce_API.Core": "1.0.0",
+          "Ecommerce_API.Repositories": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Ecommerce_API.Service.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Ecommerce_API.Service.dll": {}
+        }
       }
     }
   },
@@ -2447,11 +2474,23 @@
       "type": "project",
       "path": "../Ecommerce_API.Core/Ecommerce_API.Core.csproj",
       "msbuildProject": "../Ecommerce_API.Core/Ecommerce_API.Core.csproj"
+    },
+    "Ecommerce_API.Repositories/1.0.0": {
+      "type": "project",
+      "path": "../Ecommerce_API.Repositories/Ecommerce_API.Repositories.csproj",
+      "msbuildProject": "../Ecommerce_API.Repositories/Ecommerce_API.Repositories.csproj"
+    },
+    "Ecommerce_API.Service/1.0.0": {
+      "type": "project",
+      "path": "../Ecommerce_API.Service/Ecommerce_API.Service.csproj",
+      "msbuildProject": "../Ecommerce_API.Service/Ecommerce_API.Service.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
       "Ecommerce_API.Core >= 1.0.0",
+      "Ecommerce_API.Repositories >= 1.0.0",
+      "Ecommerce_API.Service >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 6.0.14",
       "Microsoft.EntityFrameworkCore.Design >= 6.0.14",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.14",
@@ -2489,6 +2528,12 @@
           "projectReferences": {
             "D:\\Wep\\project\\Ecommerce_API_NTT\\Ecommerce_API.Core\\Ecommerce_API.Core.csproj": {
               "projectPath": "D:\\Wep\\project\\Ecommerce_API_NTT\\Ecommerce_API.Core\\Ecommerce_API.Core.csproj"
+            },
+            "D:\\Wep\\project\\Ecommerce_API_NTT\\Ecommerce_API.Repositories\\Ecommerce_API.Repositories.csproj": {
+              "projectPath": "D:\\Wep\\project\\Ecommerce_API_NTT\\Ecommerce_API.Repositories\\Ecommerce_API.Repositories.csproj"
+            },
+            "D:\\Wep\\project\\Ecommerce_API_NTT\\Ecommerce_API.Service\\Ecommerce_API.Service.csproj": {
+              "projectPath": "D:\\Wep\\project\\Ecommerce_API_NTT\\Ecommerce_API.Service\\Ecommerce_API.Service.csproj"
             }
           }
         }

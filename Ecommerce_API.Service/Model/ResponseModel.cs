@@ -1,0 +1,22 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Ecommerce_API.Service.Model
+{
+    public class ResponseModel
+    {
+        private int status = 200;
+        private bool isSuccess = true;
+        private int totalPages = 1;
+
+        public string? Title { get; set; }
+        public int Status { get => status; set => status = value; }
+        public dynamic? Data { get; set; }
+        public bool IsSuccess { get => isSuccess; set => isSuccess = value; }
+        public int TotalPages { get => totalPages; set => totalPages = value; }
+        public DateTime? Expired { get; set; }
+    }
+}

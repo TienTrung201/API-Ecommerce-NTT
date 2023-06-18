@@ -1,4 +1,6 @@
 using Ecommerce_API.Core.Initial;
+using Ecommerce_API.Repositories;
+using Ecommerce_API.Service.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -14,6 +16,9 @@ builder.Services.AddDbContext<EcommerceDbContext>(options =>
     var connectionString = builder.Configuration.GetConnectionString("Ecommerce");
     options.UseSqlServer(connectionString, b => b.MigrationsAssembly("Ecommerce_API_NTT"));
 });
+
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IUserService,UserService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

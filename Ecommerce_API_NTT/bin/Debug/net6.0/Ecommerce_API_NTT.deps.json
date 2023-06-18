@@ -9,6 +9,8 @@
       "Ecommerce_API_NTT/1.0.0": {
         "dependencies": {
           "Ecommerce_API.Core": "1.0.0",
+          "Ecommerce_API.Repositories": "1.0.0",
+          "Ecommerce_API.Service": "1.0.0",
           "Microsoft.EntityFrameworkCore": "6.0.14",
           "Microsoft.EntityFrameworkCore.Design": "6.0.14",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.14",
@@ -497,6 +499,23 @@
         "runtime": {
           "Ecommerce_API.Core.dll": {}
         }
+      },
+      "Ecommerce_API.Repositories/1.0.0": {
+        "dependencies": {
+          "Ecommerce_API.Core": "1.0.0"
+        },
+        "runtime": {
+          "Ecommerce_API.Repositories.dll": {}
+        }
+      },
+      "Ecommerce_API.Service/1.0.0": {
+        "dependencies": {
+          "Ecommerce_API.Core": "1.0.0",
+          "Ecommerce_API.Repositories": "1.0.0"
+        },
+        "runtime": {
+          "Ecommerce_API.Service.dll": {}
+        }
       }
     }
   },
@@ -850,6 +869,16 @@
       "hashPath": "system.windows.extensions.4.7.0.nupkg.sha512"
     },
     "Ecommerce_API.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Ecommerce_API.Repositories/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Ecommerce_API.Service/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

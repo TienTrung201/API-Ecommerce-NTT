@@ -10,3 +10,6 @@ D:\Wep\project\Ecommerce_API_NTT\Ecommerce_API.Repositories\obj\Debug\net6.0\Eco
 D:\Wep\project\Ecommerce_API_NTT\Ecommerce_API.Repositories\obj\Debug\net6.0\refint\Ecommerce_API.Repositories.dll
 D:\Wep\project\Ecommerce_API_NTT\Ecommerce_API.Repositories\obj\Debug\net6.0\Ecommerce_API.Repositories.pdb
 D:\Wep\project\Ecommerce_API_NTT\Ecommerce_API.Repositories\obj\Debug\net6.0\ref\Ecommerce_API.Repositories.dll
+D:\Wep\project\Ecommerce_API_NTT\Ecommerce_API.Repositories\bin\Debug\net6.0\Ecommerce_API.Core.dll
+D:\Wep\project\Ecommerce_API_NTT\Ecommerce_API.Repositories\bin\Debug\net6.0\Ecommerce_API.Core.pdb
+D:\Wep\project\Ecommerce_API_NTT\Ecommerce_API.Repositories\obj\Debug\net6.0\Ecommerce_API.Repositories.csproj.CopyComplete

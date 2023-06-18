@@ -67,3 +67,7 @@ D:\Wep\project\Ecommerce_API_NTT\Ecommerce_API_NTT\obj\Debug\net6.0\refint\Ecomm
 D:\Wep\project\Ecommerce_API_NTT\Ecommerce_API_NTT\obj\Debug\net6.0\Ecommerce_API_NTT.pdb
 D:\Wep\project\Ecommerce_API_NTT\Ecommerce_API_NTT\obj\Debug\net6.0\Ecommerce_API_NTT.genruntimeconfig.cache
 D:\Wep\project\Ecommerce_API_NTT\Ecommerce_API_NTT\obj\Debug\net6.0\ref\Ecommerce_API_NTT.dll
+D:\Wep\project\Ecommerce_API_NTT\Ecommerce_API_NTT\bin\Debug\net6.0\Ecommerce_API.Repositories.dll
+D:\Wep\project\Ecommerce_API_NTT\Ecommerce_API_NTT\bin\Debug\net6.0\Ecommerce_API.Service.dll
+D:\Wep\project\Ecommerce_API_NTT\Ecommerce_API_NTT\bin\Debug\net6.0\Ecommerce_API.Repositories.pdb
+D:\Wep\project\Ecommerce_API_NTT\Ecommerce_API_NTT\bin\Debug\net6.0\Ecommerce_API.Service.pdb
