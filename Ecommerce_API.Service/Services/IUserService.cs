@@ -1,19 +1,19 @@
 ﻿using Ecommerce_API.Core.Entities;
 using Ecommerce_API.Service.Model;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Ecommerce_API.Service.Services
 {
     public interface IUserService
     {
+        //create
         Task<UserResponseDto> CreateUser(UserRequestDto userRequestDto);
-
+        //get
         Task<List<UserResponseDto>> GetAllUsers();
-
-        Task<UserResponseDto> UpdateUser(UserRequestDto userRequestDto);
+        Task<UserResponseDto> GetUserById(string id);
+        //update
+        Task<UserResponseDto> UpdateUser(string id,UserRequestDto userRequestDto);
+        //remove
+        Task<UserResponseDto> RemoveUser(string id);
     }
 }

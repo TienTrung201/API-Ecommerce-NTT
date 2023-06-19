@@ -12,7 +12,8 @@ namespace Ecommerce_API.Service.Profiles
     public class UserProfile : Profile
     {
         public UserProfile() {
-            CreateMap<UserRequestDto, UserEntity>().ForMember(dest => dest.UserId, opt => opt.Ignore());
+            //CreateMap<UserRequestDto, UserEntity>().ForMember(dest => dest.UserId, opt => opt.Ignore());
+            CreateMap<UserRequestDto, UserEntity>();
             CreateMap<UserEntity, UserResponseDto>();
         }
     }

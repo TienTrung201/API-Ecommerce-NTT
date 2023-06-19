@@ -1,11 +1,6 @@
 ﻿using Ecommerce_API.Core.Entities;
 using Ecommerce_API.Core.Initial;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Ecommerce_API.Repositories.Repositories
 {
@@ -24,7 +19,7 @@ namespace Ecommerce_API.Repositories.Repositories
             var result = await _context.SaveChangesAsync();
             if (result == 0)
             {
-                throw new Exception("Không thể thêm mới người dùng");
+                throw new Exception("cant't create user");
             }
             return user;
         }
@@ -40,7 +35,7 @@ namespace Ecommerce_API.Repositories.Repositories
             var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == email);
             if (user == null)
             {
-                throw new Exception("Không thể tìm thấy người dùng");
+                throw new Exception("cant't find user");
             }
             return user;
         }
@@ -50,7 +45,7 @@ namespace Ecommerce_API.Repositories.Repositories
             var user = await _context.Users.FirstOrDefaultAsync(u => u.UserId == userId);
             if (user == null)
             {
-                throw new Exception("Không thể tìm thấy người dùng");
+                throw new Exception("cant't find user");
             }
             return user;
         }
@@ -60,7 +55,7 @@ namespace Ecommerce_API.Repositories.Repositories
             var user = await _context.Users.FirstOrDefaultAsync(u => u.UserName.ToLower() == userName.ToLower());
             if (user == null)
             {
-                throw new Exception("Không thể tìm thấy người dùng");
+                throw new Exception("cant't find user");
             }
             return user;
         }
@@ -72,7 +67,18 @@ namespace Ecommerce_API.Repositories.Repositories
             var result = await _context.SaveChangesAsync();
             if (result == 0)
             {
-                throw new Exception("Không thể cập nhật người dùng");
+                throw new Exception("cant't update user");
+            }
+            return user;
+        }
+        //remove
+        public async Task<UserEntity> RemoveUser(UserEntity user)
+        {
+            _context.Users.Remove(user);
+            var result= await _context.SaveChangesAsync();
+            if (result == 0)
+            {
+                throw new Exception("cant't remove user");
             }
             return user;
         }

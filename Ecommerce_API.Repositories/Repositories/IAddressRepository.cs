@@ -12,7 +12,12 @@ namespace Ecommerce_API.Repositories.Repositories
         //get
         
         Task<List<AddressEntity>> GetAllAddress();
+        Task<AddressEntity> GetAddressById(int id);
         //add
         Task<AddressEntity> CreateAddress(AddressEntity address);
+        //update
+        Task<AddressEntity> UpdateAddress(AddressEntity address);
+        //remove
+        Task<AddressEntity> RemoveAddress(AddressEntity address);
     }
 }

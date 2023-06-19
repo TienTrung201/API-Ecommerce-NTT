@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Ecommerce_API.Service.Model
 {
     public class UserRequestDto
     {
-        public string? UserId { get; set; }
 
         [StringLength(50)]
         [Required]
@@ -24,7 +20,7 @@ namespace Ecommerce_API.Service.Model
         public string Email { get; set; } = string.Empty;
 
         [StringLength(20)]
-        public string? PhoneNumber { get; set; }
+        public string PhoneNumber { get; set; } = string.Empty;
 
         [StringLength(100)]
         [Required]

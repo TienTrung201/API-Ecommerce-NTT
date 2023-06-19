@@ -2,11 +2,7 @@
 using Ecommerce_API.Core.Entities;
 using Ecommerce_API.Repositories.Repositories;
 using Ecommerce_API.Service.Model;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Ecommerce_API.Service.Services
 {
@@ -19,7 +15,21 @@ namespace Ecommerce_API.Service.Services
             _userRepository = userRepository;
             _mapper = mapper;
         }
-        //createUser
+
+        //get User
+        public async Task<List<UserResponseDto>> GetAllUsers()
+        {
+            var users = await _userRepository.GetAllUsers();
+            var usersResponse = _mapper.Map<List<UserResponseDto>>(users);
+            return usersResponse;
+        }
+        public async Task<UserResponseDto> GetUserById(string id)
+        {
+            var user = await _userRepository.GetUserById(id);
+            var usersResponse = _mapper.Map<UserResponseDto>(user);
+            return usersResponse;
+        }
+        //create User
         public async Task<UserResponseDto> CreateUser(UserRequestDto userRequestDto)
         {
             var newUser = _mapper.Map<UserEntity>(userRequestDto);
@@ -29,22 +39,29 @@ namespace Ecommerce_API.Service.Services
             var userResponse= _mapper.Map<UserResponseDto>(createUser);
             return userResponse;
         }
-        //getAllUsers
-        public async Task<List<UserResponseDto>> GetAllUsers()
+       
+         
+        //update User
+        public async Task<UserResponseDto> UpdateUser(string id,UserRequestDto userRequestDto)
         {
-            var users= await _userRepository.GetAllUsers();
-            var usersResponse = _mapper.Map<List<UserResponseDto>>(users);
-            return usersResponse;
-        }
-
-        public async Task<UserResponseDto> UpdateUser(UserRequestDto userRequestDto)
-        {
-            var existuser = await _userRepository.GetUserByUserName(userRequestDto.UserName);
+            var existuser = await _userRepository.GetUserById(id);
+           
 
             _mapper.Map(userRequestDto, existuser);
             var updateUser= await _userRepository.UpdateUser(existuser);
 
             var userResponse = _mapper.Map<UserResponseDto>(updateUser);
+
+            return userResponse;
+        }
+        //Remove User
+        public async Task<UserResponseDto> RemoveUser(string id)
+        {
+            var existuser = await _userRepository.GetUserById(id);
+
+            var userDelete= await _userRepository.RemoveUser(existuser);
+
+            var userResponse = _mapper.Map<UserResponseDto>(userDelete);
 
             return userResponse;
         }

@@ -16,6 +16,23 @@ namespace Ecommerce_API.Repositories.Repositories
         {
             _context = context;
         }
+        //get
+        public async Task<List<AddressEntity>> GetAllAddress()
+        {
+            var allAddress = await _context.Addresses.ToListAsync();
+            return allAddress;
+        }
+        public async Task<AddressEntity> GetAddressById(int id)
+        {
+            var address = await _context.Addresses.FirstOrDefaultAsync(u => u.AddressId == id);
+            if (address == null)
+            {
+                throw new Exception("cant't find address");
+            }
+            return address;
+        }
+
+        //create
         public async Task<AddressEntity> CreateAddress(AddressEntity address)
         {
             await _context.Addresses.AddAsync(address);
@@ -26,11 +43,29 @@ namespace Ecommerce_API.Repositories.Repositories
             }
             return address;
         }
-
-        public async Task<List<AddressEntity>> GetAllAddress()
+        //update
+        public async Task<AddressEntity> UpdateAddress(AddressEntity address)
         {
-            var allAddress = await _context.Addresses.ToListAsync();
-            return allAddress;
+            _context.Addresses.Update(address);
+            var result = await _context.SaveChangesAsync();
+            if (result == 0)
+            {
+                throw new Exception("cant't update address");
+            }
+            return address;
         }
+        //remove
+        public async Task<AddressEntity> RemoveAddress(AddressEntity address)
+        {
+            _context.Addresses.Remove(address);
+            var result = await _context.SaveChangesAsync();
+            if (result == 0)
+            {
+                throw new Exception("cant't remove user");
+            }
+            return address;
+        }
+
+      
     }
 }
