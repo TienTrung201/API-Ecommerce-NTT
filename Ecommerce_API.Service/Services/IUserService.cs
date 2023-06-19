@@ -10,8 +10,10 @@ namespace Ecommerce_API.Service.Services
 {
     public interface IUserService
     {
-        Task<UserEntity> CreateUser(UserRequestDto userRequestDto);
+        Task<UserResponseDto> CreateUser(UserRequestDto userRequestDto);
 
-        Task<List<UserEntity>> GetAllUsers();
+        Task<List<UserResponseDto>> GetAllUsers();
+
+        Task<UserResponseDto> UpdateUser(UserRequestDto userRequestDto);
     }
 }

@@ -17,12 +17,12 @@ namespace Ecommerce_API_NTT.Controllers
         }
         //get
         [HttpGet]
-        public async Task<IActionResult> GetAllUsers()
+        public async Task<IActionResult> GetUsers()
         {
-            var allUsers = await _userService.GetAllUsers();
+            var UserResponse = await _userService.GetAllUsers();
             return Ok(new ResponseModel
             {
-                Data = allUsers
+                Data = UserResponse
             }); ;
         }
         //post
@@ -52,6 +52,30 @@ namespace Ecommerce_API_NTT.Controllers
             }
 
 
+        }
+        //update
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateUser([FromRoute] string id,[FromBody] UserRequestDto userRequestDto)
+        {
+            if (String.IsNullOrEmpty(id) || userRequestDto.UserName == null)
+            {
+                return BadRequest();
+            }
+            try
+            {
+                var updateUser = await _userService.UpdateUser(userRequestDto);
+                return Ok(new ResponseModel
+                {
+                    Data = updateUser
+                });
+            }
+            catch(Exception ex)
+            {
+                return StatusCode(
+                    StatusCodes.Status500InternalServerError,
+                    new ResponseModel() { Status = 500, Title = ex.Message }
+                );
+            }
         }
 
     }

@@ -16,6 +16,8 @@ namespace Ecommerce_API.Repositories.Repositories
         Task<List<UserEntity>> GetAllUsers();
         //add
         Task<UserEntity> CreateUser(UserEntity user);
+        //update
+        Task<UserEntity> UpdateUser(UserEntity user);
 
     }
 }

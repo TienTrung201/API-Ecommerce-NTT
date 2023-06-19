@@ -71,3 +71,5 @@ D:\Wep\project\Ecommerce_API_NTT\Ecommerce_API_NTT\bin\Debug\net6.0\Ecommerce_AP
 D:\Wep\project\Ecommerce_API_NTT\Ecommerce_API_NTT\bin\Debug\net6.0\Ecommerce_API.Service.dll
 D:\Wep\project\Ecommerce_API_NTT\Ecommerce_API_NTT\bin\Debug\net6.0\Ecommerce_API.Repositories.pdb
 D:\Wep\project\Ecommerce_API_NTT\Ecommerce_API_NTT\bin\Debug\net6.0\Ecommerce_API.Service.pdb
+D:\Wep\project\Ecommerce_API_NTT\Ecommerce_API_NTT\bin\Debug\net6.0\AutoMapper.dll
+D:\Wep\project\Ecommerce_API_NTT\Ecommerce_API_NTT\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

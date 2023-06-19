@@ -24,30 +24,57 @@ namespace Ecommerce_API.Repositories.Repositories
             var result = await _context.SaveChangesAsync();
             if (result == 0)
             {
-                throw new Exception("Không thể thêm mới user");
+                throw new Exception("Không thể thêm mới người dùng");
             }
             return user;
         }
-
+        //getAllUsers
         public async Task<List<UserEntity>> GetAllUsers()
         {
             var allUser = await _context.Users.ToListAsync();
             return allUser;
         }
 
-        public Task<UserEntity> GetUserByEmail(string email)
+        public async Task<UserEntity> GetUserByEmail(string email)
         {
-            throw new NotImplementedException();
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == email);
+            if (user == null)
+            {
+                throw new Exception("Không thể tìm thấy người dùng");
+            }
+            return user;
         }
 
-        public Task<UserEntity> GetUserById(string userId)
+        public async Task<UserEntity> GetUserById(string userId)
         {
-            throw new NotImplementedException();
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.UserId == userId);
+            if (user == null)
+            {
+                throw new Exception("Không thể tìm thấy người dùng");
+            }
+            return user;
         }
 
-        public Task<UserEntity> GetUserByUserName(string userName)
+        public async Task<UserEntity> GetUserByUserName(string userName)
         {
-            throw new NotImplementedException();
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.UserName.ToLower() == userName.ToLower());
+            if (user == null)
+            {
+                throw new Exception("Không thể tìm thấy người dùng");
+            }
+            return user;
+        }
+
+        //update
+        public async Task<UserEntity> UpdateUser(UserEntity user)
+        {
+            _context.Users.Update(user);
+            var result = await _context.SaveChangesAsync();
+            if (result == 0)
+            {
+                throw new Exception("Không thể cập nhật người dùng");
+            }
+            return user;
         }
     }
 }

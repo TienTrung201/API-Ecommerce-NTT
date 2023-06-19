@@ -19,6 +19,21 @@ builder.Services.AddDbContext<EcommerceDbContext>(options =>
 
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IUserService,UserService>();
+
+
+// Add Cors
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(policyBuilder =>
+    {
+        policyBuilder.AllowAnyOrigin();
+        policyBuilder.AllowAnyMethod();
+        policyBuilder.AllowAnyHeader();
+    });
+});
+//builder.Services.AddAutoMapper(typeof(Program).Assembly);
+// Add auto mapper
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -29,7 +44,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
+app.UseCors();
 app.UseAuthorization();
 
 app.MapControllers();
